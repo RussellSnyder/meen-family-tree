@@ -1,0 +1,14 @@
+{
+  "name": "meen-family-tree",
+  "version": "1.0.0",
+  "description": "Mongo, Express, Ember & Node - Fullstack Javascript Example",
+  "main": "index.js",
+  "scripts": {
+    "start": "(cd server && npm run start) & (cd client && npm run start)",
+    "seed": "(cd server && npm run seed)",
+    "start:dev": "(cd server && npm run start:dev) & (cd client && npm run start:dev)"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
