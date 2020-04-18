@@ -1,0 +1,15 @@
+{{log model}}
+<ul>
+  {{#each model as | fm |}}
+    <li>{{fm.firstName}} {{fm.lastName}}</li>
+    {{#if fm.mother}}
+      <li>mother: {{fm.mother.firstName}} {{fm.mother.lastName}}</li>
+    {{/if}}
+    {{#if fm.father}}
+      <li>father: {{fm.father.firstName}} {{fm.father.lastName}}</li>
+    {{/if}}
+    {{#if fm.partner}}
+      <li>partner: {{fm.partner.firstName}} {{fm.partner.lastName}}</li>
+    {{/if}}
+  {{/each}}
+</ul>

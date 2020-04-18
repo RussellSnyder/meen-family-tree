@@ -8,4 +8,7 @@ export default class Router extends EmberRouter {
 
 Router.map(function() {
   this.route('quote');
+  this.route('family-members', function() {
+    this.route('index', { path: '/' });
+  });
 });

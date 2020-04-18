@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 
 const port = process.env.PORT || 3000;
 
-const mongoose   = require('mongoose');
+const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/family-tree');
 
 // set the static files location for our Ember application

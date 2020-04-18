@@ -12,12 +12,17 @@ module.exports.getAllFamilyMembers = function(req, res) {
 module.exports.getFamilyMember = function(req, res) {
     const id = req.params.id;
 
-    FamilyMember.findById(id, function(err, familyMember) {
-        if (err) {
-            res.send(err);
-        }
-        res.json(familyMember);
-    });
+    FamilyMember
+        .findOne({ _id: id })
+        .populate('partner')
+        .populate('mother')
+        .populate('father')
+        .exec(function (err, familyMember) {
+            if (err) {
+                res.send(err);
+            }
+            res.json(familyMember);
+        });
 };
 
 module.exports.addFamilyMember = function(req,res) {
